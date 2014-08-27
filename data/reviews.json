@@ -1,0 +1,115 @@
+[{
+    "body": "You have to try the Baja tacos! The fish is amazing and so fresh, and the sauce is just spicy enough.",
+    "rating": 4,
+    "restID": 2,
+    "reviewer": "greg@assortedgarbage.com",
+    "title": "Best Tacos in town"
+}, {
+    "body": "We stopped by close to 9pm for a burrito and a margarita. The margarita was awesome, but the burrito was tough. It seemed like it might've been sitting out for a couple of hours.",
+    "rating": 2,
+    "restID": 2,
+    "reviewer": "sam@someplace.com",
+    "title": "Burrito was a bit tough"
+}, {
+    "body": "This is one of our favorite spots for drinks after work. The patio is generally packed during good weather, so it's best to get there early. And the house tequila better than top shelf stuff elsewhere.",
+    "rating": 5,
+    "restID": 2,
+    "reviewer": "devin@theuniversity.edu",
+    "title": "Great spot for happy hour"
+}, {
+    "body": "The kids love taco Tuesdays! It's the perfect place to avoid cooking - and you can't beat the fact that all the tacos are only 2 bucks a piece.",
+    "rating": 4,
+    "restID": 2,
+    "reviewer": "howard@theduck.com",
+    "title": "Taco Tuesdays are the bomb"
+}, {
+    "body": "Whether you are looking for a spot to start your day or end your day, this is a great spot.",
+    "rating": 5,
+    "restID": 1,
+    "reviewer": "sue@someplace.com",
+    "title": "The namesake tea is delicious"
+}, {
+    "body": "Love the huge selection of teas - can't miss!",
+    "rating": 4,
+    "restID": 1,
+    "reviewer": "ak@myblog.com",
+    "title": "Tea, tea, tea"
+}, {
+    "body": "Having lived and worked in Asia for many years, I can attest to just how good this food is. Very authentic.",
+    "rating": 4,
+    "restID": 3,
+    "reviewer": "joe@foodcritic.com",
+    "title": "Best food this side of Hong Kong"
+}, {
+    "body": "The servers were walking in slow motion and brought the wrong order - twice!",
+    "rating": 2,
+    "restID": 4,
+    "reviewer": "greg@apigee.com",
+    "title": "Lousy service"
+}, {
+    "body": "Went for the spring rolls, which were good. But I'll be going back for the amazing noodle bowls.",
+    "rating": 5,
+    "restID": 3,
+    "reviewer": "harry@buckinghampalace.co.uk",
+    "title": "Forget the spring rolls - go for the noodles"
+}, {
+    "body": "Seriously, is there any better burger in the entire world?!",
+    "rating": 5,
+    "restID": 10,
+    "reviewer": "ronald@macdonald.biz",
+    "title": "Double Double - Animal Style"
+}, {
+    "body": "When they say hot, they really, really, really mean it! Better bring a fire hose with you.",
+    "rating": 4,
+    "restID": 6,
+    "reviewer": "bk@hottermail.com",
+    "title": "Spices that are off the chart"
+}, {
+    "body": "Breakfast, lunch or dinner, you can't go wrong here. They are even open late if you want to swing by for dessert.",
+    "rating": 4,
+    "restID": 9,
+    "reviewer": "sue@neighborhoods.org",
+    "title": "Great find, in a great neighborhood"
+}, {
+    "body": "Is it wrong to crave these for breakfast?",
+    "rating": 5,
+    "restID": 9,
+    "reviewer": "sugar@sweettooth.org",
+    "title": "Try the chocolate and strawberries"
+}, {
+    "body": "Fresh, fresh, fresh. Great lunch spot.",
+    "rating": 4,
+    "restID": 5,
+    "reviewer": "hoo@canitbe.no",
+    "title": "These guys make it wok!"
+}, {
+    "body": "Simply amazing from the cocktails to appetizers to entrees and, of course, the dessert!",
+    "rating": 5,
+    "restID": 7,
+    "reviewer": "peppy@lepew.io",
+    "title": "Always a pleasure!"
+}, {
+    "body": "If it's beer that you're after, it's a great place. But eat before you go (or after), cause the food is nothing to write home about.",
+    "rating": 3,
+    "restID": 8,
+    "reviewer": "me@geemail.com",
+    "title": "Lots of taps, but skip the food"
+}, {
+    "body": "I love stopping in for a quick business lunch on the outdoor patio. Good prices, too.",
+    "rating": 4,
+    "restID": 8,
+    "reviewer": "heidi@wheatons.edu",
+    "title": "Good lunch menu"
+}, {
+    "body": "Mix it up and drop the bread. It's a double double wrapped in crispy lettuce. Grab some extra napkins though, it drips a lot.",
+    "rating": 4,
+    "restID": 10,
+    "reviewer": "fred@flintstones.us",
+    "title": "Try the Double Double - protein style"
+}, {
+    "body": "Can't complain about a very consistent joint. Get there early on a Friday though, because it tends to fill up quickly.",
+    "rating": 4,
+    "restID": 5,
+    "reviewer": "noah@boatsr.us",
+    "title": "All around good food"
+}]

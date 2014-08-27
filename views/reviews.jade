@@ -1,0 +1,12 @@
+div#detail-review
+	ul#detail-review-list
+		each review in reviews[0].entities
+			li
+				h4 
+					span.stars
+						- var stars = Number(review.rating * 20)
+						span.star-rating(style="width:#{stars}px") 
+					| #{review.title}
+				p
+					i.block #{review.reviewer}
+					| #{review.body}

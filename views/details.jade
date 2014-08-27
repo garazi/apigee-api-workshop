@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+	section#page-detail(data-role='page')
+		- var url = "details"
+		include header
+
+		div#detail-box(data-role='content')
+			h3#detail-name #{restaurant.name}
+			span.b.block Address:
+			p#detail-address #{restaurant.address}
+				span.block #{restaurant.city}, #{restaurant.state}
+			p#detail-rating
+				span.b Average Rating:  
+				| #{reviews[1].aggregate}
+				span.stars
+					- var stars = Number(reviews[1].aggregate * 19.8)
+					span.star-rating(style="width:#{stars}px")
+			div#detail-map
+				img(src="http://maps.googleapis.com/maps/api/staticmap?center=#{restaurant.location.latitude}, #{restaurant.location.longitude}&zoom=14&size=300x300&markers=color:blue%7Clabel:S%7C#{restaurant.location.latitude},#{restaurant.location.longitude}")
+			p.btn-wrapper
+				a#btn-new.button.ui-btn-right(data-role="button" data-icon="plus" data-iconpos="right" data-inline="true" href="/addReview/#{restaurant.restID}") Write a Review
+
+			include reviews

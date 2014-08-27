@@ -1,0 +1,21 @@
+extends layout
+	
+block content
+
+	section#page-detail(data-role='page')
+
+		include header
+
+		article(data-role="content")
+			form#form-add-item(method="post")
+				label(for="form-title") Review Title:
+				input#form-title(type="text" placeholder="Give your review a title")
+				label(for="form-email") Your Email:
+				input#form-email(type="text" placeholder="Please add your email")
+				label(for="form-rating") Rating:
+				input#form-rating(type="text" placeholder="Rating on a scale of 1-5")
+				label(for="form-desc") Review:
+				textarea#form-desc(placeholder="Add any additional information here...")
+				input#form-uuid(type="hidden" value="#{restaurantID}")
+				a#btn-cancel(data-role="button" data-icon="delete" onclick="history.back()") Cancel
+				a#btn-submit(data-role="button" data-icon="plus" onclick="addReview()") Submit

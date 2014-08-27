@@ -1,0 +1,38 @@
+{
+    "name": "Eats",
+    "version": "0.0.1",
+    "private": "true",
+    "description": "A Yelp-like App",
+    "keywords": [],
+    "author": "",
+    "license": "",
+    "main": "app.js",
+    "dependencies": {
+        "express": "3.x.x",
+        "a127-magic": "",
+        "usergrid": "x.x.x",
+        "volos-quota-memory": "x.x.x",
+        "volos-cache-memory": "x.x.x",
+        "volos-mysql": "x.x.x",
+        "volos-mailer": "x.x.x",
+        "avault": "",
+        "request": "x.x.x",
+        "async": "x.x.x",
+        "jade": "*"
+    },
+    "devDependencies": {
+        "should": "3.1.x"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "api": {
+        "name": "Eats",
+        "basePath": "/eats",
+        "docsPath": "/docs",
+        "main": "app.js"
+    },
+    "dist": {
+        "shasum": "b67690108f92e867bbbdcafccb0b2ec0a99ea08e"
+    }
+}

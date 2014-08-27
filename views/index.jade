@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	section#page-main(data-role='page')
+		include header
+
+		article#contentlist(data-role="content")
+			ul#restaurantList.myList(data-role="listview")
+				each restaurant in restaurants
+					li 
+						a(href="/details/#{restaurant.restID}") #{restaurant.name}

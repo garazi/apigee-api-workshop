@@ -1,0 +1,17 @@
+extends layout
+	
+block content
+
+	section#page-detail(data-role='page')
+
+		include header
+
+		article(data-role="content")
+			form#form-login-user
+                label(for="form-username") Username:
+                input#form-username(type="text" placeholder="Enter your username...")
+                label(for="form-password") Password:
+                input#form-password(placeholder='Enter your password...')
+				a#btn-clear(data-role='button', data-icon='delete') Clear
+				a#btn-login-submit(data-role='button', data-icon='plus') Submit
+				a#btn-newuser(data-role='button', data-icon='user', href='#') Login with Facebook

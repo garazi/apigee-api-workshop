@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		block head
+			block title
+				title Eats!
+			block meta
+				meta(name='description', content='')
+				meta(name='keywords', content='')
+			link(rel='stylesheet', href='/css/font-awesome.min.css')
+			link(rel='stylesheet' href='/css/font/roboto-regular.css')
+			link(rel='stylesheet', href='/css/jquery.mobile.structure-1.3.1.min.css')
+			link(rel='stylesheet', href='/css/eats.css')
+			| <style>
+			| body { padding-top: 60px; }
+			| </style>
+			script(src='/js/jquery-1.9.1.min.js')
+			script(src='/js/jquery.mobile-1.3.1.min.js')
+			script(src='http://maps.google.com/maps/api/js?sensor=true')
+			script(src='/js/main.js')
+	body
+		block content

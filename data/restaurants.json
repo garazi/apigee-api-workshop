@@ -1,0 +1,241 @@
+[{
+    "restID": 1,
+    "name": "Pomegranate Cafe",
+    "address": "4025 E Chandler Blvd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3044612,
+        "longitude": -111.9945753
+    },
+    "phone": "+1-480-706-7472",
+    "category": "Coffee & Tea"
+}, {
+    "restID": 2,
+    "name": "Los Taquitos",
+    "address": "4747 E Elliot Rd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3480616,
+        "longitude": -111.9820214
+    },
+    "phone": "+1-480-753-4370",
+    "category": "Mexican"
+}, {
+    "restID": 3,
+    "name": "Spring Roll Factory",
+    "address": "6165 W Chandler Blvd",
+    "city": "Chandler",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3044272,
+        "longitude": -111.9479565
+    },
+    "phone": "+1-480-785-0625",
+    "category": "Vietnamese"
+}, {
+    "restID": 4,
+    "name": "Ezekiel's Restaurant",
+    "address": "4825 E Warner Rd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3293584260744,
+        "longitude": -111.979372836649
+    },
+    "phone": "+1-480-785-4886",
+    "category": "American (New)"
+}, {
+    "restID": 5,
+    "name": "Great Wok",
+    "address": "3646 E Ray Rd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3165959,
+        "longitude": -112.0036214
+    },
+    "phone": "+1-480-706-5000",
+    "category": "Chinese"
+}, {
+    "restID": 6,
+    "name": "Thailicious",
+    "address": "5865 W Ray Rd",
+    "city": "Chandler",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3186906,
+        "longitude": -111.9437771
+    },
+    "phone": "+1-480-306-6792",
+    "category": "Thai"
+}, {
+    "restID": 7,
+    "name": "Kai",
+    "address": "5594 W Wild Horse Pass Blvd",
+    "city": "Chandler",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.2664769,
+        "longitude": -111.9918702
+    },
+    "phone": "+1-602-225-0100",
+    "category": "American (New)"
+}, {
+    "restID": 8,
+    "name": "CK's Tavern & Grill",
+    "address": "4142 E Chandler Blvd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3057628,
+        "longitude": -111.9933802
+    },
+    "phone": "+1-480-706-5564",
+    "category": "American (Traditional)"
+}, {
+    "restID": 9,
+    "name": "Crêpe Bar",
+    "address": "7520 S Rural Rd",
+    "city": "Tempe",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3497113609575,
+        "longitude": -111.929925579031
+    },
+    "phone": "+1-480-247-8012",
+    "category": "Creperies"
+}, {
+    "restID": 10,
+    "name": "In-N-Out Burger",
+    "address": "7050 W Ray Rd",
+    "city": "Chandler",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3204548,
+        "longitude": -111.9641591
+    },
+    "phone": "+1-800-786-1000",
+    "category": "Burgers"
+}, {
+    "restID": 11,
+    "name": "Farm At South Mountain",
+    "address": "6106 S 32nd St",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3906771,
+        "longitude": -112.0129108
+    },
+    "phone": "+1-602-276-6360",
+    "category": "Fruits & Veggies"
+}, {
+    "restID": 12,
+    "name": "Hillside Spot",
+    "address": "4740 E Warner Rd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3204548,
+        "longitude": -111.9641591
+    },
+    "phone": "+1-480-705-7768",
+    "category": "Breakfast & Brunch"
+}, {
+    "restID": 13,
+    "name": "Mr Chao's Asian Bistro",
+    "address": "4232 E Chandler Blvd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.305945,
+        "longitude": -111.99117
+    },
+    "phone": "+1-480-759-2899",
+    "category": "Chinese"
+}, {
+    "restID": 14,
+    "name": "Tott's Asian Diner",
+    "address": "4030 W Ray Rd",
+    "city": "Chandler",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3203454,
+        "longitude": -111.9970792
+    },
+    "phone": "+1-480-897-7928",
+    "category": "Chinese"
+}, {
+    "restID": 15,
+    "name": "Panda Garden",
+    "address": "4730 E Warner Rd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.333182,
+        "longitude": -111.983142
+    },
+    "phone": "+1-480-598-9018",
+    "category": "Chinese"
+}, {
+    "restID": 16,
+    "name": "Va Bene",
+    "address": "4647 E Chandler Blvd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.304026,
+        "longitude": -111.980951
+    },
+    "phone": "+1-480-706-4070",
+    "category": "Italian"
+}, {
+    "restID": 17,
+    "name": "Star of India",
+    "address": "4025 E Chandler Blvd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.304667,
+        "longitude": -111.9945819
+    },
+    "phone": "+1-480-706-1700",
+    "category": "Indian"
+}, {
+    "restID": 18,
+    "name": "Biscuits",
+    "address": "4623 E Elliott Rd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.3487055477927,
+        "longitude": -111.983256340027
+    },
+    "phone": "+1-480-209-1850",
+    "category": "Breakfast & Brunch"
+}, {
+    "restID": 19,
+    "name": "Chanpen Thai Cuisine",
+    "address": "2727 E Broadway Rd",
+    "city": "Phoenix",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.4067006,
+        "longitude": -112.0224394
+    },
+    "phone": "+1-602-276-3778",
+    "category": "Thai"
+}, {
+    "restID": 20,
+    "name": "AZ Bread Company",
+    "address": "315 W Elliot Rd",
+    "city": "Tempe",
+    "state": "AZ",
+    "location": {
+        "latitude": 33.348763010085996,
+        "longitude": -111.94435105010001
+    },
+    "phone": "+1-480-831-1300",
+    "category": "Breakfast & Brunch"
+}]
