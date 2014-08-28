@@ -11,7 +11,20 @@ consumes:
   - "application/json"
 produces:
   - "application/json"
-x-volos-resources: {}
+x-volos-resources: 
+  cache:
+    provider: "volos-cache-memory"
+    options:
+      - "name"
+      -
+        ttl: 10000
+  quota:
+    provider: "volos-quota-memory"
+    options:
+      -
+        timeUnit: "hour"
+        interval: 1
+        allow: 2
 paths:
   /hello:
     x-swagger-router-controller: "hello_world"
@@ -41,7 +54,8 @@ paths:
   /restaurants:
     x-swagger-router-controller: "restaurants"
     x-volos-authorizations: {}
-    x-volos-apply: {}
+    x-volos-apply: 
+      cache: []
     get:
       description: "Returns a list of restaurants"
       operationId: "getRestaurants"
@@ -108,6 +122,8 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"
     post:
+      x-volos-apply:
+        quota: []
       description: "Posts a new review"
       operationId: "postReview"
       parameters:

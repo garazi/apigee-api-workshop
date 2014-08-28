@@ -1,7 +1,10 @@
 var request = require('request');
+var config = require('../config')
+var restaurantData = require('../data/restaurants.json');
+var reviewsData = require('../data/reviews.json');
 
 exports.index = function(req, res) {
-    request('http://localhost:8888/restaurants', function(error, response, body) {
+    request(config.Server + '/restaurants', function(error, response, body) {
         var restaurantsArray = [];
         var restaurants = JSON.parse(body);
         var count = restaurants.count;
@@ -16,7 +19,7 @@ exports.index = function(req, res) {
 };
 
 exports.details = function (req, res) {
-	request("http://localhost:8888/restaurants/" + req.params.id, function (error, response, body) {
+	request(config.Server + "/restaurants/" + req.params.id, function (error, response, body) {
 		var payload = JSON.parse(body);
 		// res.send(payload)
 		res.render('details', {
@@ -30,4 +33,8 @@ exports.addreview = function (req, res) {
 	res.render('form', {
 		restaurantID: req.params.id
 	})
+}
+
+exports.demo = function (req, res) {
+
 }

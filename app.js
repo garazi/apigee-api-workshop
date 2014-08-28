@@ -29,9 +29,9 @@ app.all('/:dest', function(req, res, next) {
     }
 });
 
-var cache = cm.create('appCache', {
-    ttl: 15000
-});
+// var cache = cm.create('appCache', {
+//     ttl: 15000
+// });
 
 // app.get('/restaurants', cache.connectMiddleware().cache(), function(req, res, next) {
 //     request('http://localhost:8080/workshop/sandbox/restaurants', function(error, response, body) {
@@ -97,11 +97,11 @@ var cache = cm.create('appCache', {
 //     });
 // })
 
-var quota = quotaModule.create({
-    timeUnit: 'hour',
-    interval: 1,
-    allow: 2
-});
+// var quota = quotaModule.create({
+//     timeUnit: 'hour',
+//     interval: 1,
+//     allow: 2
+// });
 
 // app.post('/reviews', quota.connectMiddleware().apply({
 //     identifier: 'Foo',
@@ -145,7 +145,7 @@ Make sure to comment out the route above if you want to use this one
 //         }
 //     });
 // });
-
+app.get('/demo-data', routes.demo);
 app.get('/addReview/:id', routes.addreview)
 app.get('/details/:id', routes.details);
 app.get('/', routes.index);
