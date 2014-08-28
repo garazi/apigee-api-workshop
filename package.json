@@ -11,6 +11,8 @@
         "express": "3.x.x",
         "a127-magic": "",
         "usergrid": "x.x.x",
+        "swagger-tools": "",
+        "volos-swagger": "",
         "volos-quota-memory": "x.x.x",
         "volos-cache-memory": "x.x.x",
         "volos-mysql": "x.x.x",

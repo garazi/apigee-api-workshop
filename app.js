@@ -54,7 +54,6 @@ app.get('/restaurants/:id', function(req, res, next) {
             },
             reviews: function(callback) {
                 async.waterfall([
-
                     function(callback) {
                         request("http://localhost:8080/workshop/sandbox/reviews/?ql=restID=" + req.params.id, function(error, response, body) {
                             if (error) {
@@ -151,9 +150,9 @@ app.get('/', routes.index);
 // app.use("/", express.static(__dirname));
 app.use(express.static(__dirname + '/public'));
 
-app.get('/hello', function(req, res) {
-    res.send('Hello from Express');
-});
+// app.get('/hello', function(req, res) {
+//     res.send('Hello from Express');
+// });
 
 app.listen('8888', function(req, res) {
     avault.get('garbageVault', function(profileString) {
