@@ -38,7 +38,109 @@ paths:
           description: "Error"
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /restaurants:
+    x-swagger-router-controller: "restaurants"
+    x-volos-authorizations: {}
+    x-volos-apply: {}
+    get:
+      description: "Returns a list of restaurants"
+      operationId: "getRestaurants"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  "/restaurants/{id}":
+    x-swagger-router-controller: "restaurants"
+    x-volos-authorizations: {}
+    x-volos-apply: {}
+    get:
+      description: "Returns 'Hello' to the caller"
+      operationId: "getRestaurantByID"
+      produces:
+        - "application/json"
+      parameters:
+        -
+          name: "id"
+          in: "path"
+          description: "The name of the person to whom to say hello"
+          required: true
+          type: "number"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+        500:
+          description: "Invalid restaurant ID supplied"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        404:
+          description: "Restaurant not found"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /reviews:
+    x-swagger-router-controller: "reviews"
+    x-volos-authorizations: {}
+    x-volos-apply: {}
+    get:
+      description: "Returns a list of restaurants"
+      operationId: "getReviews"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    post:
+      description: "Posts a new review"
+      operationId: "postReview"
+      parameters:
+        - name: "body"
+          in: "body"
+          description: "Post review and rating"
+          required: false
+          schema:
+            $ref: "#/definitions/Review"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/HelloWorldResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
 definitions:
+  Review:
+    properties:
+      title:
+        type: string
+      restID:
+        type: integer
+      rating:
+        type: integer
+      reviewer:
+        type: string
+      body:
+        type: string
   HelloWorldResponse:
     required:
       - "message"

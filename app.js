@@ -30,69 +30,69 @@ var cache = cm.create('appCache', {
     ttl: 15000
 });
 
-app.get('/restaurants', cache.connectMiddleware().cache(), function(req, res, next) {
-    request('http://localhost:8080/workshop/sandbox/restaurants', function(error, response, body) {
-        if (error) {
-            res.send(error);
-        } else {
-            res.send(body);
-        }
-    });
-});
+// app.get('/restaurants', cache.connectMiddleware().cache(), function(req, res, next) {
+//     request('http://localhost:8080/workshop/sandbox/restaurants', function(error, response, body) {
+//         if (error) {
+//             res.send(error);
+//         } else {
+//             res.send(body);
+//         }
+//     });
+// });
 
-app.get('/restaurants/:id', function(req, res, next) {
-    async.parallel({
-            restaurant: function(callback) {
-                request("http://localhost:8080/workshop/sandbox/restaurants/?ql=restID=" + req.params.id, function(error, response, body) {
-                    if (error) {
-                        res.send(error);
-                    } else {
-                        var result = JSON.parse(body);
-                        callback(null, result);
-                    }
-                });
-            },
-            reviews: function(callback) {
-                async.waterfall([
-                    function(callback) {
-                        request("http://localhost:8080/workshop/sandbox/reviews/?ql=restID=" + req.params.id, function(error, response, body) {
-                            if (error) {
-                                res.send(error);
-                            } else {
-                                data = JSON.parse(body);
-                                callback(null, data);
-                            }
-                        });
-                    },
-                    function(data, callback) {
-                        var l = data.entities.length;
-                        var aggregate = 0;
-                        var i;
-                        for (i = 0; i < l; i++) {
-                            aggregate += data.entities[i].rating;
-                        }
-                        aggregate = {
-                            aggregate: +(aggregate / i).toFixed(2)
-                        }
-                        callback(null, data, aggregate);
-                    }
-                ], callback);
-            }
-        },
-        function(err, results) {
-            res.send(results);
-        });
-});
+// app.get('/restaurants/:id', function(req, res, next) {
+//     async.parallel({
+//             restaurant: function(callback) {
+//                 request("http://localhost:8080/workshop/sandbox/restaurants/?ql=restID=" + req.params.id, function(error, response, body) {
+//                     if (error) {
+//                         res.send(error);
+//                     } else {
+//                         var result = JSON.parse(body);
+//                         callback(null, result);
+//                     }
+//                 });
+//             },
+//             reviews: function(callback) {
+//                 async.waterfall([
+//                     function(callback) {
+//                         request("http://localhost:8080/workshop/sandbox/reviews/?ql=restID=" + req.params.id, function(error, response, body) {
+//                             if (error) {
+//                                 res.send(error);
+//                             } else {
+//                                 data = JSON.parse(body);
+//                                 callback(null, data);
+//                             }
+//                         });
+//                     },
+//                     function(data, callback) {
+//                         var l = data.entities.length;
+//                         var aggregate = 0;
+//                         var i;
+//                         for (i = 0; i < l; i++) {
+//                             aggregate += data.entities[i].rating;
+//                         }
+//                         aggregate = {
+//                             aggregate: +(aggregate / i).toFixed(2)
+//                         }
+//                         callback(null, data, aggregate);
+//                     }
+//                 ], callback);
+//             }
+//         },
+//         function(err, results) {
+//             res.send(results);
+//         });
+// });
 
-app.get('/reviews', function(req, res) {
-    request('http://localhost:8080/workshop/sandbox/restaurants', function(error, response, body) {
-        if (error) {
-            res.send(error);
-        } else {
-            res.send(body);
-        }
-    });
-})
+// app.get('/reviews', function(req, res) {
+//     request('http://localhost:8080/workshop/sandbox/reviews', function(error, response, body) {
+//         if (error) {
+//             res.send(error);
+//         } else {
+//             res.send(body);
+//         }
+//     });
+// })
 
 var quota = quotaModule.create({
     timeUnit: 'hour',
@@ -100,20 +100,20 @@ var quota = quotaModule.create({
     allow: 2
 });
 
-app.post('/reviews', quota.connectMiddleware().apply({
-    identifier: 'Foo',
-    weight: 1
-}), function(req, res) {
-    request.post('http://localhost:8080/workshop/sandbox/reviews', {
-        form: JSON.stringify(req.body)
-    }, function(error, response, body) {
-        if(error) {
-            res.send(error)
-        } else {
-            res.send(body);
-        }      
-    });
-});
+// app.post('/reviews', quota.connectMiddleware().apply({
+//     identifier: 'Foo',
+//     weight: 1
+// }), function(req, res) {
+//     request.post('http://localhost:8080/workshop/sandbox/reviews', {
+//         form: JSON.stringify(req.body)
+//     }, function(error, response, body) {
+//         if(error) {
+//             res.send(error)
+//         } else {
+//             res.send(body);
+//         }      
+//     });
+// });
 /* 
 The following uses the non-middleware implementation of the volos-quota 
 Make sure to comment out the route above if you want to use this one
