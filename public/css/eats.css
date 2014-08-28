@@ -29,6 +29,22 @@
     padding: 0;
     font-size: 14px;
 }
+#page-wrapper {
+    position: relative;
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 6px 6px 8px rgba(0,0,0,.6);
+    /*border: 1px solid rgb(255, 67, 0);*/
+}
+#page-wrapper section[data-role="page"] {
+    position: relative !important;
+}
+#page-wrapper section[data-role="page"] header {
+    left: auto;
+    right: auto;
+    max-width: 600px;
+}
 
 #detail-review-list h4, #detail-review-list p {
     padding: 0;
@@ -53,9 +69,10 @@
     width: 20px;
     display: inline-block;
 }
-body {
+html body {
     color: black;
     font-family: sans-serif;
+    padding-top: 0 !important;
 }
 .b {
     font-weight: bold;
