@@ -135,7 +135,7 @@ footer {
 #restaurantList.myList li:before {
     /*content:"\f096";*/
     content:"";
-    font-family: FontAwesome;
+    font-family: Arial;
     font-size: 24px;
     color: rgb(255, 67, 0);
     position: absolute;
@@ -150,7 +150,7 @@ footer {
 }
 #inspirelist li:after {
     content:"\f116";
-    font-family: FontAwesome;
+    font-family: Arial;
     font-size: 24px;
     color: rgb(255, 67, 0);
     position: absolute;
@@ -205,7 +205,7 @@ z-index: 1;
     color: #fff;
 }
 .ui-page {
-    font-family: roboto-regular, sans-serif;
+    font-family: arial, sans-serif;
     font-weight: 300;
 }
 .ui-content {
@@ -328,7 +328,7 @@ input.ui-input-text, textarea.ui-input-text {
     top: 20px;
 }
 /*
- * FontAwesome adjustments for jQM
+ * Arial adjustments for jQM
  */
  .ui-icon-glass:after {
     content:"\f000";
@@ -1405,7 +1405,7 @@ input.ui-input-text, textarea.ui-input-text {
 .ui-slider-inneroffset .ui-slider-handle .ui-btn-inner {
     opacity: 0.8;
     border-radius: 3px;
-    font-family:FontAwesome;
+    font-family:Arial;
     font-weight:normal;
     font-style:normal;
     text-decoration:inherit;

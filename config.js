@@ -1,7 +1,7 @@
 module.exports = {
 	// Server address
-	Server: "http://localhost:8888",
+	Server: "http://grewis-test.apigee.net/eats",
 
 	// Usergrid path
-	UG: "http://localhost:8080/workshop/sandbox"
+	UG: "http://api.usergrid.com/garazi/sandbox"
 }

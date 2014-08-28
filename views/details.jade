@@ -20,6 +20,6 @@ block content
 			div#detail-map
 				img(src="http://maps.googleapis.com/maps/api/staticmap?center=#{restaurant.location.latitude}, #{restaurant.location.longitude}&zoom=14&size=300x300&markers=color:blue%7Clabel:S%7C#{restaurant.location.latitude},#{restaurant.location.longitude}")
 			p.btn-wrapper
-				a#btn-new.button.ui-btn-right(data-role="button" data-icon="plus" data-iconpos="right" data-inline="true" href="/addReview/#{restaurant.restID}") Write a Review
+				a#btn-new.button.ui-btn-right(data-role="button" data-icon="plus" data-iconpos="right" data-inline="true" href="../addReview/#{restaurant.restID}") Write a Review
 
 			include reviews
