@@ -1,7 +1,4 @@
 request = require('request');
-// express = require('express')
-// app = express();
-// app.use(express.bodyParser());
 
 var config = require('../../config')
 

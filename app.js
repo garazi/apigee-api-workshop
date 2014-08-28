@@ -13,11 +13,13 @@ var app = express();
 
 var nodemailerConnectorObject;
 
+app.use(express.bodyParser());
+
 app.use(a127.middleware());
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
-app.use(express.bodyParser());
+
 
 app.all('/:dest', function(req, res, next) {
     if (req.params.dest === "mail") {
