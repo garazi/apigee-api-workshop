@@ -1,13 +1,15 @@
 request = require('request');
 async = require('async');
 
+var config = require('../../config')
+
 module.exports = {
 	getRestaurants: getRestaurants,
 	getRestaurantByID: getRestaurantByID
 }
 
 function getRestaurants (req, res) {
-	request('http://localhost:8080/workshop/sandbox/restaurants', function(error, response, body) {
+	request( config.UG + '/restaurants', function(error, response, body) {
         if (error) {
             res.send(error);
         } else {
@@ -20,7 +22,7 @@ function getRestaurantByID (req, res) {
 	var restID = req.swagger.params.id.value;
 	async.parallel({
             restaurant: function(callback) {
-                request("http://localhost:8080/workshop/sandbox/restaurants/?ql=restID=" + restID, function(error, response, body) {
+                request(config.UG + "/restaurants/?ql=restID=" + restID, function(error, response, body) {
                     if (error) {
                         res.send(error);
                     } else {
@@ -32,7 +34,7 @@ function getRestaurantByID (req, res) {
             reviews: function(callback) {
                 async.waterfall([
                     function(callback) {
-                        request("http://localhost:8080/workshop/sandbox/reviews/?ql=restID=" + restID, function(error, response, body) {
+                        request(config.UG + "/reviews/?ql=restID=" + restID, function(error, response, body) {
                             if (error) {
                                 res.send(error);
                             } else {

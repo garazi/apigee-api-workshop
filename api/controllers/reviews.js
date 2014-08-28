@@ -3,13 +3,15 @@ request = require('request');
 // app = express();
 // app.use(express.bodyParser());
 
+var config = require('../../config')
+
 module.exports = {
 	getReviews: getReviews,
 	postReview: postReview
 }
 
 function getReviews (req, res) {
-	request('http://localhost:8080/workshop/sandbox/reviews', function(error, response, body) {
+	request(config.UG + '/reviews', function(error, response, body) {
         if (error) {
             res.send(error);
         } else {
@@ -19,7 +21,7 @@ function getReviews (req, res) {
 }
 
 function postReview (req, res) {
-	request.post('http://localhost:8080/workshop/sandbox/reviews', {
+	request.post(config.UG + '/reviews', {
         form: JSON.stringify(req.body)
     }, function(error, response, body) {
         if(error) {

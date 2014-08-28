@@ -1,5 +1,4 @@
 function addReview() {
-    // $('#form-uuid').val($('#detail-name').attr('data-restID'));
     var payload = {
         title: $('#form-title').val(),
         reviewer: $('#form-email').val(),
