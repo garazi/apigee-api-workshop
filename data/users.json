@@ -1,0 +1,62 @@
+[
+{
+	"name": "Thomas Jefferson",
+	"username": "TJ",
+	"email": "tj@monticello.com",
+	"password": 12345678
+},
+{
+	"name": "Benjamin Franklin",
+	"username": "benny",
+	"email": "benny@philly.gov",
+	"password": 12345678
+},
+{
+	"name": "Scooby Doo",
+	"username": "scooby",
+	"email": "scooby@mysterymachine.biz",
+	"password": 12345678
+},
+{
+	"name": "James T Kirk",
+	"username": "captkirk",
+	"email": "jim@enterprise.us",
+	"password": 12345678
+},
+{
+	"name": "Luke Skywalker",
+	"username": "luke",
+	"email": "luke@skywalker.me",
+	"password": 12345678
+},
+{
+	"name": "Wiley Coyote",
+	"username": "wileycoyote",
+	"email": "wileycoyote@acme.com",
+	"password": 12345678
+},
+{
+	"name": "Bugs Bunny",
+	"username": "bugsy",
+	"email": "bugs@wb.com",
+	"password": 12345678
+},
+{
+	"name": "Harry Weiss",
+	"username": "houdini",
+	"email": "harry@escapesr.us",
+	"password": 12345678
+},
+{
+	"name": "Jonathon Appleseed",
+	"username": "johnnyapples",
+	"email": "j@appleseed.com",
+	"password": 12345678
+},
+{
+	"name": "Fred Flintstone",
+	"username": "fredflint",
+	"email": "fred@flintstones.us",
+	"password": 12345678
+}
+]

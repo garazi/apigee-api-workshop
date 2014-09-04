@@ -62,7 +62,19 @@ exports.demo = function(req, res) {
                     callback(null, data);
                 }
             });
-        }
+        },
+        users: function(callback) {
+        request.post(config.UG + "/users", {
+            form: JSON.stringify(usersData)
+        }, function(err, response, body) {
+            if (err) {
+                console.log('boom');
+            } else {
+                var data = JSON.parse(body);
+                callback(null, data);
+            }
+        });
+    }
     }, function(err, results) {
         res.send(results);
     });
