@@ -1,18 +1,18 @@
-request = require('request');
+// request = require('request');
 async = require('async');
-express = require('express')
-app = express();
-app.use(express.bodyParser())
+// // express = require('express');
+// // app = express();
+// // app.use(express.bodyParser());
 
-var config = require('../../config')
+var config = require('../../config');
 
 module.exports = {
-	getRestaurants: getRestaurants,
-	getRestaurantByID: getRestaurantByID
-}
+    getRestaurants: getRestaurants,
+    getRestaurantByID: getRestaurantByID
+};
 
-function getRestaurants (req, res) {
-	request(config.UG + '/restaurants', function(error, response, body) {
+function getRestaurants(req, res) {
+    request(config.UG + '/restaurants', function(error, response, body) {
         if (error) {
             res.send(error);
         } else {
@@ -21,9 +21,9 @@ function getRestaurants (req, res) {
     });
 }
 
-function getRestaurantByID (req, res) {
-	var restID = req.swagger.params.id.value;
-	async.parallel({
+function getRestaurantByID(req, res) {
+    var restID = req.swagger.params.id.value;
+    async.parallel({
             restaurant: function(callback) {
                 request(config.UG + "/restaurants/?ql=restID=" + restID, function(error, response, body) {
                     if (error) {
@@ -55,7 +55,7 @@ function getRestaurantByID (req, res) {
                         }
                         aggregate = {
                             aggregate: +(aggregate / i).toFixed(2)
-                        }
+                        };
                         callback(null, data, aggregate);
                     }
                 ], callback);

@@ -111,6 +111,11 @@ paths:
           description: The name of the person to whom to say hello
           required: false
           type: number
+        - name: reviewer
+          in: query
+          description: Get reviews by a specific user
+          required: false
+          type: string
       responses:
         "200":
           description: Success

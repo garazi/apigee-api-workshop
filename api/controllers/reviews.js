@@ -1,6 +1,6 @@
 request = require('request');
 
-var config = require('../../config')
+var config = require('../../config');
 
 module.exports = {
 	getReviews: getReviews,
@@ -15,6 +15,9 @@ function getReviews (req, res) {
 	} else if (req.swagger.params.rating.value) {
 		var rating = req.swagger.params.rating.value;
 		qs = "?ql=rating=" + rating;
+	} else if (req.swagger.params.reviewer.value) {
+		var reviewer = req.swagger.params.reviewer.value;
+		qs = "?ql=reviewer=" + reviewer;
 	}
 	request(config.UG + '/reviews' + qs, function(error, response, body) {
         if (error) {
@@ -30,7 +33,7 @@ function postReview (req, res) {
         form: JSON.stringify(req.body)
     }, function(error, response, body) {
         if(error) {
-            res.send(error)
+            res.send(error);
         } else {
             res.send(body);
         }      
