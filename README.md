@@ -17,4 +17,4 @@ You also need to set the baseURL variable in the Jade template: layout.jade loca
 ```jade
 - var baseURL = "http://localhost:8888/"
 ```
-Then, start app.js and hit /demo-data to create and populate the restaurants and reviews collections in Usergrid.
+Then, start app.js and hit http://your-app-url/demo-data to create and populate the restaurants, reviews and users collections in Usergrid.
