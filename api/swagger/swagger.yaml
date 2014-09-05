@@ -68,14 +68,14 @@ paths:
     x-volos-authorizations: {}
     x-volos-apply: {}
     get:
-      description: "Returns 'Hello' to the caller"
+      description: Returns a single restaurant and its reviews
       operationId: getRestaurantByID
       produces:
         - application/json
       parameters:
         - name: id
           in: path
-          description: The name of the person to whom to say hello
+          description: The restID of the restaurant
           required: true
           type: number
       responses:
@@ -103,12 +103,12 @@ paths:
       parameters:
         - name: restID
           in: query
-          description: The name of the person to whom to say hello
+          description: Get reviews for a specific restaurant
           required: false
           type: number
         - name: rating
           in: query
-          description: The name of the person to whom to say hello
+          description: Get reviews with a specific rating
           required: false
           type: number
         - name: reviewer
@@ -153,6 +153,28 @@ paths:
       operationId: getUsers
       produces:
         - application/json
+      responses:
+        "200":
+          description: Success
+          schema: {}
+        default:
+          description: Error
+          schema: {}
+  /users/{username}:
+    x-swagger-router-controller: users
+    x-volos-authorizations: {}
+    x-volos-apply: {}
+    get:
+      description: Returns a single user
+      operationId: getUserByID
+      produces:
+        - application/json
+      parameters:
+        - name: username
+          in: path
+          description: The username of the user
+          required: true
+          type: string
       responses:
         "200":
           description: Success

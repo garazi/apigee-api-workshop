@@ -8,7 +8,7 @@ var cm = require('volos-cache-memory');
 var nodemailerConnector = require('volos-mailer');
 var avault = require('avault').createVault(__dirname);
 var routes = require('./routes');
-var config = require('./config')
+var config = require('./config');
 var app = express();
 
 var nodemailerConnectorObject;
