@@ -29,7 +29,7 @@ app.all('/:dest', function(req, res, next) {
 });
 
 app.get('/demo-data', routes.demo);
-app.get('/addReview/:id', routes.addreview)
+app.get('/addReview/:id', routes.addreview);
 app.get('/details/:id', routes.details);
 app.get('/', routes.index);
 

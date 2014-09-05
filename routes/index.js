@@ -1,8 +1,8 @@
-var request = require('request');
+// var request = require('request');
 var async = require('async');
 var config = require('../config');
-var restaurantData = require('../data/restaurants.json');
-var reviewsData = require('../data/reviews.json');
+// var restaurantData = require('../data/restaurants.json');
+// var reviewsData = require('../data/reviews.json');
 
 exports.index = function(req, res) {
     request(config.Server + '/restaurants', function(error, response, body) {
@@ -16,13 +16,12 @@ exports.index = function(req, res) {
         res.render('index', {
             restaurants: restaurantsArray
         });
-    })
+    });
 };
 
 exports.details = function(req, res) {
     request(config.Server + "/restaurants/" + req.params.id, function(error, response, body) {
         var payload = JSON.parse(body);
-        // res.send(payload)
         res.render('details', {
             restaurant: payload.restaurant.entities[0],
             reviews: payload.reviews

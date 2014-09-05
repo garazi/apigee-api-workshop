@@ -8,4 +8,4 @@ block content
 			ul#restaurantList.myList(data-role="listview")
 				each restaurant in restaurants
 					li 
-						a(href="details/#{restaurant.restID}") #{restaurant.name}
+						a(href="#{baseURL}details/#{restaurant.restID}") #{restaurant.name}
