@@ -85,7 +85,7 @@ paths:
         default:
           description: Error
           schema: {}
-  "/restaurants/{id}":
+  /restaurants/{id}:
     x-swagger-router-controller: restaurants
     x-volos-authorizations: {}
     x-volos-apply: {}
@@ -155,7 +155,8 @@ paths:
           in: body
           description: Post review and rating
           required: false
-          schema: {}
+          schema: 
+            $ref: "#/definitions/Review"
       produces:
         - application/json
       responses:

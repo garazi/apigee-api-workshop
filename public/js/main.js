@@ -7,7 +7,7 @@ function addReview() {
         restID: Number($('#form-uuid').val())
     }
     $.ajax({
-        url: "/reviews",
+        url: "../reviews",
         type: "POST",
         headers: {
             'Content-Type':'application/json'
@@ -27,7 +27,7 @@ function addReview() {
                 alert("You are limited to 2 reviews an hour");
                 window.location = "/";
             } else {
-                window.location = "/details/" + receipt.entities[0].restID;
+                window.location = "../details/" + receipt.entities[0].restID;
             }
             
         })
