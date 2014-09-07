@@ -24,7 +24,7 @@ function addReview() {
             var receipt = JSON.parse(result);
             console.log(receipt)
             if (receipt.error) {
-                alert("You are limited to 2 reviews an hour");
+                alert("Reviews are limited to 2 per hour");
                 window.location = "/";
             } else {
                 window.location = "../details/" + receipt.entities[0].restID;
