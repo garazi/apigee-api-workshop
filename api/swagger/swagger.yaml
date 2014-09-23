@@ -23,6 +23,23 @@ x-volos-resources:
       timeUnit: hour
       interval: 1
       allow: 2
+  oauth2:
+    provider: volos-oauth-apigee
+    options:
+      key: *apigeeProxyKey
+      uri: *apigeeProxyUri
+      validGrantTypes:
+        - client_credentials
+        - authorization_code
+        - implicit_grant
+        - password
+      tokenLifetime: 30000
+      tokenPaths:
+        authorize: /authorize
+        token: /accesstoken
+        invalidate: /invalidate
+        refresh: /refresh
+
 paths:
   /hello:
     x-swagger-router-controller: hello_world
