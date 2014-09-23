@@ -1,4 +1,4 @@
-// request = require('request');
+request = require('request');
 var config = require('../../config');
 
 module.exports = {

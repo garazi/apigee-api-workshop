@@ -1,4 +1,4 @@
-// var request = require('request');
+var request = require('request');
 var async = require('async');
 var config = require('../config');
 // var restaurantData = require('../data/restaurants.json');

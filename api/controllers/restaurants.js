@@ -9,7 +9,7 @@ module.exports = {
 };
 
 function getRestaurants(req, res) {
-    request(config.UG + '/restaurants', function(error, response, body) {
+    request(config.UG + '/restaurants?limit=100', function(error, response, body) {
         if (error) {
             res.send(error);
         } else {
