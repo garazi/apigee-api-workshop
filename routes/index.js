@@ -1,8 +1,8 @@
 var request = require('request');
 var async = require('async');
 var config = require('../config');
-// var restaurantData = require('../data/restaurants.json');
-// var reviewsData = require('../data/reviews.json');
+var restaurantData = require('../data/restaurants.json');
+var reviewsData = require('../data/reviews.json');
 
 exports.index = function(req, res) {
     request(config.Server + '/restaurants', function(error, response, body) {
