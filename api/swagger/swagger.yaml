@@ -73,10 +73,12 @@ paths:
           schema: {}
   /restaurants:
     x-swagger-router-controller: restaurants
-    x-volos-authorizations: {}
+    x-volos-authorizations: 
+      oauth2: {}
     x-volos-apply:
       cache: {}
       quota: {}
+      analytics: {}
     get:
       description: Returns a list of restaurants
       operationId: getRestaurants
