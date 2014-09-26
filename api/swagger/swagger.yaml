@@ -23,6 +23,31 @@ x-volos-resources:
       timeUnit: hour
       interval: 1
       allow: 2
+  oauth2:
+    provider: volos-oauth-apigee
+    options:
+      key: *apigeeProxyKey
+      uri: *apigeeProxyUri
+      validGrantTypes:
+        - client_credentials
+        - authorization_code
+        - implicit_grant
+        - password
+      tokenLifetime: 30000
+      tokenPaths:
+        authorize: /authorize
+        token: /accesstoken
+        invalidate: /invalidate
+        refresh: /refresh
+  analytics:
+    provider: volos-analytics-apigee
+    options:
+      key: *apigeeProxyKey
+      uri: *apigeeProxyUri
+      proxy: remoteEatsProxy
+      bufferSize: 1000
+      flushInterval: 2000
+      batchSize: 100
 paths:
   /hello:
     x-swagger-router-controller: hello_world
@@ -48,9 +73,12 @@ paths:
           schema: {}
   /restaurants:
     x-swagger-router-controller: restaurants
-    x-volos-authorizations: {}
+    x-volos-authorizations: 
+      oauth2: {}
     x-volos-apply:
-      cache: []
+      cache: {}
+      quota: {}
+      analytics: {}
     get:
       description: Returns a list of restaurants
       operationId: getRestaurants
@@ -124,8 +152,7 @@ paths:
           description: Error
           schema: {}
     post:
-      x-volos-apply:
-        quota: []
+      x-volos-apply: {}
       description: Posts a new review
       operationId: postReview
       parameters:
