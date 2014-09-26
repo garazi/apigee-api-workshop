@@ -67,7 +67,8 @@ paths:
     x-swagger-router-controller: restaurants
     x-volos-authorizations: {}
     x-volos-apply:
-      cache: []
+      cache: {}
+      quota: {}
     get:
       description: Returns a list of restaurants
       operationId: getRestaurants
@@ -141,8 +142,7 @@ paths:
           description: Error
           schema: {}
     post:
-      x-volos-apply:
-        quota: []
+      x-volos-apply: {}
       description: Posts a new review
       operationId: postReview
       parameters:
