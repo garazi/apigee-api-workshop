@@ -39,7 +39,15 @@ x-volos-resources:
         token: /accesstoken
         invalidate: /invalidate
         refresh: /refresh
-
+  analytics:
+    provider: volos-analytics-apigee
+    options:
+      key: *apigeeProxyKey
+      uri: *apigeeProxyUri
+      proxy: remoteEatsProxy
+      bufferSize: 1000
+      flushInterval: 2000
+      batchSize: 100
 paths:
   /hello:
     x-swagger-router-controller: hello_world
