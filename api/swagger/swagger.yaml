@@ -11,6 +11,9 @@ consumes:
   - application/json
 produces:
   - application/json
+x-a127-config:
+  apigeeProxyKey: &apigeeProxyKey CONFIGURED
+  apigeeProxyUri: &apigeeProxyUri CONFIGURED
 x-volos-resources:
   cache:
     provider: volos-cache-memory
