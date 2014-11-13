@@ -34,7 +34,7 @@ function getRestaurantByID(req, res) {
             reviews: function(callback) {
                 async.waterfall([
                     function(callback) {
-                        request(config.UG + "/reviews/?ql=restID=" + restID, function(error, response, body) {
+                        request(config.Server + "/reviews?restID=" + restID, function(error, response, body) {
                             if (error) {
                                 res.send(error);
                             } else {
