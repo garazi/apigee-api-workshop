@@ -98,17 +98,17 @@ paths:
     x-swagger-router-controller: restaurants
     x-volos-authorizations: {}
     x-volos-apply: {}
-    get:
-      description: Returns a single restaurant and its reviews
-      operationId: getRestaurantByID
-      produces:
-        - application/json
-      parameters:
+    parameters:
         - name: id
           in: path
           description: The restID of the restaurant
           required: true
           type: number
+    get:
+      description: Returns a single restaurant and its reviews
+      operationId: getRestaurantByID
+      produces:
+        - application/json
       responses:
         "200":
           description: Success
